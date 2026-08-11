@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Private Page</title>
+</head>
+
+<body>
+
+    <div id="login">
+        <h2>🔒 Enter Password</h2>
+
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="checkPassword()">Enter</button>
+
+        <p id="error" style="color: red;"></p>
+    </div>
+
+    <div id="content" style="display: none;">
+        <h1>🎉 Welcome!</h1>
+        <p>Your secret page is here.</p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById("password").value;
+
+            if (password === "rickroll123") {
+                document.getElementById("login").style.display = "none";
+                document.getElementById("content").style.display = "block";
+            } else {
+                document.getElementById("error").textContent = "Wrong password!";
+            }
+        }
+    </script>
+
+</body>
+</html>
